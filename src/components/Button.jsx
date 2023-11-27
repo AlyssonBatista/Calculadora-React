@@ -1,15 +1,17 @@
 import React from 'react'
 import './Button.css'
+
+
 const Button = (props) => {
-let classes = 'button'
+let classes = 'button '
 classes += props.operation ? 'operation' : ''
-classes += props.operation ? 'double' : ''
-classes += props.operation ? 'triple' : ''
+classes += props.double ? 'double' : ''
+classes += props.triple ? 'triple' : ''
 
   return (
    <button 
    className={classes}
-   onClick={e => props.click && props.click(props.label)}
+   onClick={ef => props.click && props.click(props.label)}
    >{props.label}</button>
   )
 }
